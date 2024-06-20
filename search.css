@@ -11,6 +11,10 @@ body{
     flex-wrap: wrap;
 }
 
+.meal-name{
+    font-family: "Patrick Hand", cursive;
+}
+
 
 
 .titleOne{
