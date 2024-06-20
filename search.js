@@ -54,7 +54,8 @@ function getMealRecipe(e){
     }
 }
 
-// create a modal
+// create recipe section --- recipe sections will show on the top of the page when you
+// click it but it will not open up in a modal format for some reason
 function mealRecipeModal(meal){
     console.log(meal);
     meal = meal[0];

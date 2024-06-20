@@ -47,6 +47,16 @@ body{
     transform: translateY(2px);
 }
 
+.randomBtn{
+    font-family: "Patrick Hand", cursive;
+    font-size: 14px;
+    background-color: #DEE5E5;
+    border-color: #8d9494;
+    cursor: pointer;
+  position: relative;
+  left: 781px;
+}
+
 .ingr{
     list-style-type: none;
     font-family: "Patrick Hand", cursive;
