@@ -1,0 +1,1 @@
+This is a web app designed to help people get meal recipes. They have the option to retrieve a random recipe that lists all the ingridents needed to make the meal and it has the instructions too. There is also an option that allows the user to search for meals by a specific ingridient to ensure they have what they need to create a meal they want to eat.

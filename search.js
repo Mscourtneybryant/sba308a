@@ -6,9 +6,6 @@ const recipeCloseBtn = document.getElementById('recipe-close-btn');
 // event listeners
 searchBtn.addEventListener('click', getMealList);
 mealList.addEventListener('click', getMealRecipe);
-recipeCloseBtn.addEventListener('click', () => {
-    mealDetailsContent.parentElement.classList.remove('showRecipe');
-});
 
 
 // get meal list that matches with the ingredients
@@ -34,7 +31,7 @@ function getMealList(){
             });
             mealList.classList.remove('notFound');
         } else{
-            html = "Sorry, we didn't find any meal!";
+            html = "Sorry, we didn't find any meals with that ingredient. Try again!";
             mealList.classList.add('notFound');
         }
 
@@ -44,11 +41,11 @@ function getMealList(){
 
 
 // get recipe of the meal
-function getMealRecipe(e){
+async function getMealRecipe(e){
     e.preventDefault();
     if(e.target.classList.contains('recipe-btn')){
         let mealItem = e.target.parentElement.parentElement;
-        fetch(`https://www.themealdb.com/api/json/v1/1/lookup.php?i=${mealItem.dataset.id}`)
+       await fetch(`https://www.themealdb.com/api/json/v1/1/lookup.php?i=${mealItem.dataset.id}`)
         .then(response => response.json())
         .then(data => mealRecipeModal(data.meals));
     }
@@ -57,11 +54,11 @@ function getMealRecipe(e){
 // create recipe section --- recipe sections will show on the top of the page when you
 // click it but it will not open up in a modal format for some reason
 function mealRecipeModal(meal){
-    console.log(meal);
+    
     meal = meal[0];
     
     let html = `
-    
+   
         <h1 class = "recipe-title">${meal.strMeal}</h1>
         <h2 class = "recipe-category">Category: ${meal.strCategory}</h2>
         <div class = "recipe-instruct">
@@ -89,6 +86,7 @@ function mealRecipeModal(meal){
         <div class = "recipe-meal-img">
             <img src = "${meal.strMealThumb}" alt = "" width="300">
         </div>
+        
     
    
     `;
