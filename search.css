@@ -11,11 +11,13 @@ body{
     flex-wrap: wrap;
 }
 
+
+
 .titleOne{
     text-align: center;
     font-family: "Patrick Hand", cursive;
     font-size: 28px;
-    color: #5E807F
+    color: #5E807F;
 }
 
 .title{
@@ -43,4 +45,41 @@ body{
 #search-btn:hover{
     background-color: #d3d8d8;
     transform: translateY(2px);
+}
+
+.ingr{
+    list-style-type: none;
+    font-family: "Patrick Hand", cursive;
+}
+
+
+
+.meal-img{
+    border: solid;
+    border-color: #8d9494;
+}
+
+
+.recipe-title{
+    font-family: "Patrick Hand", cursive;
+    font-size: 22px;
+    color: #5E807F
+}
+
+.recipe-category{
+    font-family: "Patrick Hand", cursive;
+    font-size: 20px;
+    color: #5E807F
+}
+
+.insructTitle{
+    font-family: "Patrick Hand", cursive;
+}
+
+.fullInstruct{
+    font-family: "Patrick Hand", cursive;
+}
+
+.ingrList{
+    font-family: "Patrick Hand", cursive;
 }
