@@ -20,6 +20,11 @@ fetch("https://www.themealdb.com/api/json/v1/1/random.php")
   .catch((error) => console.error("FETCH ERROR:", error));
 
 
+
+
+
+
+
   function displayMeal (data){
     const meal = data.meals[0];
      const mealDiv = document.getElementById("meal");
@@ -32,6 +37,9 @@ fetch("https://www.themealdb.com/api/json/v1/1/random.php")
      const mealPic = document.createElement("img");
      mealPic.src = meal.strMealThumb;
      mealDiv.appendChild(mealPic);
+
+
+
      
 
      const mealIngredients = document.createElement("ul");
@@ -51,8 +59,19 @@ fetch("https://www.themealdb.com/api/json/v1/1/random.php")
     listItem = document.createElement("li");
     listItem.innerHTML = value;
     mealIngredients.appendChild(listItem)
+
    }
+
+   const instructions = meal.strInstructions;
+   const instruct = document.createElement("p");
+   instruct.innerHTML = instructions;
+   mealDiv.appendChild(instruct)
+
 
   }
 
-  
+  document.getElementById("newRecipe").addEventListener("click", changeMeal);
+
+  function changeMeal(){
+    location.reload()
+  }

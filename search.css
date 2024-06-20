@@ -1,0 +1,46 @@
+body{
+    background-color: #9DC5BB;
+}
+
+#meal{
+    display: flex;
+    flex-direction: row;
+    justify-content:space-between;
+    align-items: center;
+    text-align: center;
+    flex-wrap: wrap;
+}
+
+.titleOne{
+    text-align: center;
+    font-family: "Patrick Hand", cursive;
+    font-size: 28px;
+    color: #5E807F
+}
+
+.title{
+    font-family: "Patrick Hand", cursive;
+    font-size: 24px;
+    text-align: center;
+    color: #5E807F
+}
+
+.meal-search-box{
+    display: flex;
+    padding-top: 50px;
+    justify-content: center;
+    align-items: center;
+}
+
+#search-btn{
+    font-family: "Patrick Hand", cursive;
+    font-size: 14px;
+    background-color: #DEE5E5;
+    border-color: #8d9494;
+    cursor: pointer;
+}
+
+#search-btn:hover{
+    background-color: #d3d8d8;
+    transform: translateY(2px);
+}
